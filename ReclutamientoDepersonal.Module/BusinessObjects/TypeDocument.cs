@@ -11,11 +11,11 @@ using System.Collections.Generic;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
+using ReclutamientoDepersonal.Module.Util;
 
 namespace ReclutamientoDepersonal.Module.BusinessObjects
 {
-    [DefaultClassOptions]
-   
+    [DefaultClassOptions]   
     public class TypeDocument : BaseObject
     { 
         public TypeDocument(Session session)
@@ -27,9 +27,8 @@ namespace ReclutamientoDepersonal.Module.BusinessObjects
             base.AfterConstruction();
         }
        
-        public string DocumentName   { get; set; }
+        public EDocument Document   { get; set; }
         public string DocumentNumber { get; set; }
-        public Person person { get; set; }
 
     }
 }
