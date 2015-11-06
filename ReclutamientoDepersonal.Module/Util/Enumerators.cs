@@ -3,14 +3,8 @@ using DevExpress.Xpo;
 
 namespace ReclutamientoDepersonal.Module.Util
 {
-
-    public enum EDocument {
-        DUI,
-        NIT,
-        PASSPORT        
-    }
-
-    public enum ESexo {
+    
+    public enum ESex {
         Male,
         Female
     }

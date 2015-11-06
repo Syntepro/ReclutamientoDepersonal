@@ -11,18 +11,18 @@ using System.Collections.Generic;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
-
+using ReclutamientoDepersonal.Module.Util;
 namespace ReclutamientoDepersonal.Module.BusinessObjects
 {
-    [NavigationItem("System Maintenance")]
-    [ImageName("Action_OrganizeDashboard")]
+    [NavigationItem("Staff Recruitment")]
+    [ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112701.aspx).
-    public class TypeDocument : BaseObject
+    public class Candidate : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        public TypeDocument(Session session)
+        public Candidate(Session session)
             : base(session)
         {
         }
@@ -46,6 +46,12 @@ namespace ReclutamientoDepersonal.Module.BusinessObjects
         //    this.PersistentProperty = "Paid";
         //}
 
-        public string Document{ get; set; }
+        public string   FirstName{ get; set; }
+        public string   LastName { get; set; }
+        public ESex     sex{ get; set; }
+        public DateTime BirhDate { get; set; }
+
+        public List<Documentation> Docuements{ get; set; }
+
     }
 }

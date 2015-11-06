@@ -15,10 +15,9 @@ using ReclutamientoDepersonal.Module.Util;
 
 namespace ReclutamientoDepersonal.Module.BusinessObjects
 {
-    [DefaultClassOptions]
-    public class Person : BaseObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        public Person(Session session)
+    public class Documentation : BaseObject
+    { 
+        public Documentation(Session session)
             : base(session)
         {
         }
@@ -26,12 +25,9 @@ namespace ReclutamientoDepersonal.Module.BusinessObjects
         {
             base.AfterConstruction();
         }
+       
+        public TypeDocument TypeDocument   { get; set; }
+        public string DocumentNumber { get; set; }
 
-        public string FirstName { get; set; }
-        public string LastName  { get; set; }
-        public ESexo Sexo { get; set; }
-        public DateTime BirthDate { get; set; }
-        
-        
     }
 }

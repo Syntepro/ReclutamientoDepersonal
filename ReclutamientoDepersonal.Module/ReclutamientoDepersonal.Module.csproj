@@ -89,7 +89,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\Person.cs" />
+    <Compile Include="BusinessObjects\Candidate.cs" />
+    <Compile Include="BusinessObjects\Documentation.cs" />
     <Compile Include="BusinessObjects\TypeDocument.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
@@ -110,6 +111,7 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
